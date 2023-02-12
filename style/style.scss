@@ -1,0 +1,107 @@
+@import "./globalStyle";
+
+
+main{
+    font-family: 'Poppins', sans-serif;
+    background-color:  hsl(0, 0%, 98%);
+
+    .wrapper{
+        padding: 4rem 2rem;
+        display: grid;
+            place-items: center;
+            gap: 1rem;
+        .info{
+            margin-bottom: 2rem;
+
+            .info__title span{
+                font-weight: 200;
+            }
+            .info__description{
+                line-height:1.575rem;
+                font-weight: 200;
+                color: hsl(229, 6%, 66%);
+                max-width: 400px;
+            }
+        }
+    
+        .features{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            &:hover> :not(:hover){
+                opacity: 0.4;
+            }
+
+            @media (min-width:750px){
+                flex-direction: row;
+            }
+
+            .grid-wrap{
+                display: grid;
+                gap: 2rem;
+                &:hover> :not(:hover){
+                    opacity: 0.4;
+                }
+            }
+            
+            .card{
+                background-color: white;
+                border-radius: 5px;
+                padding: 1rem;
+                max-width: 300px;
+                min-height: 170px;
+                margin-top: auto 1.5rem;
+                box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+                transition:  .5s ease-in-out; /* Animation */
+                
+                &:hover{
+                    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+                    transform: scale(1.08);
+
+
+                }
+
+                @media (min-width:750px) and (max-width:850px) {
+                    max-width: 200px;
+                }
+                
+                @media (min-width:851px) and (max-width:1025px) {
+                    max-width: 250px;
+                }
+
+                }
+                //Upper-border style 
+                .one{
+                    border-top:3px solid  hsl(180, 62%, 55%);
+                }
+                .two{
+                    border-top:3px solid hsl(0, 78%, 62%);
+                }
+                .three{
+                    border-top:3px solid  hsl(34, 97%, 64%);
+                }
+                .four{
+                    border-top:3px solid hsl(212, 86%, 64%);
+                }
+
+                .card__image{
+                    float: right;
+                    max-width: 55px;
+                    margin-top:2rem;
+                }
+                
+                .card__description{
+                    font-size: 0.9rem;
+                    color: hsl(229, 6%, 66%);
+
+                }
+            }
+        }
+    }
+  
+  
+
+
